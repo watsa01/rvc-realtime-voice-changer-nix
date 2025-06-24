@@ -13,45 +13,39 @@
 ⠀<br />
 # Step 1. Get the requirements needed for the voice changer to work.
 
-## 1.1 Go to the 'requirements' folder and then run ( double click ) an appropriate '.bat' file for your case:
+## 1.1 Install requirements manually:
 
-⠀<br />
-### For Nvidia gpu users ( all nvidia except for RTX30XX series ):
-> install requirements for realtime voice-changer ( NVIDIA ).bat
+Install the required Python packages using pip:
 
-⠀<br />
-### For AMD / CPU / DirectML users:
-> install requirements for realtime voice-changer ( DML ).bat
+```bash
+pip install -r requirements.txt
+```
 
-⠀<br />
-### For Nvidia gpu users ( for RTX30XX series ):
-> install requirements for realtime voice-changer ( NVIDIA - For RTX 30xx series ONLY ).bat
-### IF THE ABOVE ↑ CAUSES YOUR GPU TO BE UNDETECTED / OTHER GPU RELATED PROBLEMS, USE THE BAT FROM 'RTX_30XX_fix' folder:
-> install requirements for realtime voice-changer ( NVIDIA-RTX30XX ) - CUDA_118.bat
-
-⠀<br />
-### If all those above don't work for you, as in, you can't run the voice-changer, reinstall clean py 3.10.6 and use:
-> install requirements for realtime voice-changer ( COMPATIBILITY VER  (( amd-cpu-nvidia ))  ).bat
-### ( It has my 3.10.6 tested version-pre-defined python packages and is universal.)⠀<br />[ CPU, AMD gpus, and Nvidia gpus - EXCEPT for RTX30XX series. ]
-⠀<br />
-#### ( I personally use that one for dml mode (( python 3.10.6 / Radeon RX 570 4GB )) )
+For specific GPU configurations, check the requirements folder for platform-specific dependency lists.
 
 ⠀<br />
 ## 1.2 Download the required assets:
-> Simply double click the 'download-required-assets.bat'
+Run the download script:
+```bash
+./download-required-assets.sh
+```
 
-# Step 2. Open up the voice changer using the .bat files:
+# Step 2. Open up the voice changer:
 
 ### For nvidia gpu users:
-> go-realtime-gui-nvidia.bat
+```bash
+./go-realtime-gui-nvidia.sh
+```
 
 ### For users without nvidia gpu:
-> go-realtime-gui-dml.bat
+```bash
+./go-realtime-gui-dml.sh
+```
 
 ⠀<br />
 ## Fix for potential issues:
 
-### If you get ' requests ' error when trying to run the download  .bat, you gotta open up a cmd and use this command:
+### If you get ' requests ' error when trying to run the download script, install requests:
 > pip install requests
 
 ⠀<br />
